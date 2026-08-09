@@ -1,0 +1,443 @@
+{
+  "clusters": [
+    {
+      "cluster": "S",
+      "jobs": 420000,
+      "months": 9,
+      "holdout_from": "2017-01",
+      "holdout_jobs": 191408,
+      "positive_rate": 0.25671666666666665,
+      "positive_rate_holdout": 0.25753364540667056,
+      "holdout_average_precision": {
+        "lightgbm": 0.7843120103251985,
+        "xgboost": 0.7705556989883255,
+        "blend": 0.7875299973817226
+      },
+      "holdout_average_precision_natural": {
+        "lightgbm": 0.7863079845286857,
+        "xgboost": 0.7694863460853438,
+        "blend": 0.7889114969827737
+      },
+      "identity_dropout": true,
+      "predictor": "blend",
+      "judge_unseen_rates": {
+        "username": 0.146,
+        "jobname": 0.5591,
+        "account": 0.0793
+      },
+      "holdout_masked_share": {
+        "username": 0.146,
+        "jobname": 0.559,
+        "account": 0.08
+      },
+      "validation_rounds": {
+        "lightgbm": 577,
+        "xgboost": 566
+      },
+      "final_rounds": {
+        "lightgbm": 808,
+        "xgboost": 792
+      },
+      "n_features": 134,
+      "dropped_for_extrapolation": [],
+      "refit_seeds": 2,
+      "top_features": [
+        [
+          "cat_username",
+          0.22281
+        ],
+        [
+          "cat_account",
+          0.2167
+        ],
+        [
+          "life_limit_shortfall",
+          0.10692
+        ],
+        [
+          "life_runtime_over_limit",
+          0.09914
+        ],
+        [
+          "life_remaining_seconds",
+          0.06549
+        ],
+        [
+          "cat_jobname",
+          0.03652
+        ],
+        [
+          "cpuuser_last",
+          0.02111
+        ],
+        [
+          "timelimit",
+          0.01245
+        ],
+        [
+          "start_day",
+          0.01089
+        ],
+        [
+          "te_account",
+          0.00921
+        ],
+        [
+          "tc_account",
+          0.00898
+        ],
+        [
+          "life_runtime",
+          0.00774
+        ],
+        [
+          "tc_username",
+          0.00758
+        ],
+        [
+          "te_username",
+          0.00581
+        ],
+        [
+          "te_queue__timelimit_bucket",
+          0.00539
+        ],
+        [
+          "life_span",
+          0.00527
+        ],
+        [
+          "cpuuser_mean",
+          0.00507
+        ],
+        [
+          "timelimit_log",
+          0.00502
+        ],
+        [
+          "te_username__queue",
+          0.00494
+        ],
+        [
+          "te_account__queue",
+          0.00477
+        ],
+        [
+          "tc_account__queue",
+          0.00431
+        ],
+        [
+          "memused_delta",
+          0.00423
+        ],
+        [
+          "life_rows_per_host",
+          0.00421
+        ],
+        [
+          "tc_username__queue",
+          0.00421
+        ],
+        [
+          "tc_queue__timelimit_bucket",
+          0.00419
+        ]
+      ]
+    },
+    {
+      "cluster": "C",
+      "jobs": 420000,
+      "months": 7,
+      "holdout_from": "2016-11",
+      "holdout_jobs": 158533,
+      "positive_rate": 0.0919,
+      "positive_rate_holdout": 0.08517469548926722,
+      "holdout_average_precision": {
+        "lightgbm": 0.8245050986769825,
+        "xgboost": 0.7716307608567804,
+        "blend": 0.8025192075508599
+      },
+      "holdout_average_precision_natural": {
+        "lightgbm": 0.8233334419046406,
+        "xgboost": 0.7589863108891249,
+        "blend": 0.7931983737389408
+      },
+      "identity_dropout": true,
+      "predictor": "lightgbm",
+      "judge_unseen_rates": {
+        "username": 0.2419,
+        "jobname": 0.6581,
+        "account": 0.9991
+      },
+      "holdout_masked_share": {
+        "username": 0.242,
+        "jobname": 0.668,
+        "account": 0.0
+      },
+      "validation_rounds": {
+        "lightgbm": 979,
+        "xgboost": 149
+      },
+      "final_rounds": {
+        "lightgbm": 1371,
+        "xgboost": 209
+      },
+      "n_features": 150,
+      "dropped_for_extrapolation": [
+        [
+          "memused_last",
+          0.2244
+        ]
+      ],
+      "refit_seeds": 2,
+      "top_features": [
+        [
+          "cat_username",
+          0.24851
+        ],
+        [
+          "life_limit_shortfall",
+          0.09601
+        ],
+        [
+          "nhosts",
+          0.06658
+        ],
+        [
+          "life_runtime_over_limit",
+          0.05213
+        ],
+        [
+          "cat_queue",
+          0.05013
+        ],
+        [
+          "te_queue__timelimit_bucket",
+          0.03461
+        ],
+        [
+          "life_remaining_seconds",
+          0.0269
+        ],
+        [
+          "cat_jobname",
+          0.02481
+        ],
+        [
+          "cpuuser_last",
+          0.01841
+        ],
+        [
+          "timelimit",
+          0.01584
+        ],
+        [
+          "queue_wait_over_timelimit",
+          0.01462
+        ],
+        [
+          "life_runtime",
+          0.0146
+        ],
+        [
+          "cpu_per_core",
+          0.01428
+        ],
+        [
+          "nhosts_log",
+          0.01195
+        ],
+        [
+          "obs_last_offset",
+          0.01172
+        ],
+        [
+          "tc_queue__timelimit_bucket",
+          0.00969
+        ],
+        [
+          "cpuuser_mean",
+          0.00947
+        ],
+        [
+          "block_min",
+          0.00851
+        ],
+        [
+          "queue_wait",
+          0.00796
+        ],
+        [
+          "te_username",
+          0.00757
+        ],
+        [
+          "start_day",
+          0.00755
+        ],
+        [
+          "cpuuser_head_mean",
+          0.00749
+        ],
+        [
+          "te_queue",
+          0.00744
+        ],
+        [
+          "cpuuser_max",
+          0.00712
+        ],
+        [
+          "hostdisp_cpuuser_std",
+          0.00709
+        ]
+      ]
+    },
+    {
+      "cluster": "Anvil",
+      "jobs": 249417,
+      "months": 10,
+      "holdout_from": "2023-01",
+      "holdout_jobs": 63270,
+      "positive_rate": 0.13621765958214557,
+      "positive_rate_holdout": 0.19816658764027184,
+      "holdout_average_precision": {
+        "lightgbm": 0.8989883639682958,
+        "xgboost": 0.9019200171762706,
+        "blend": 0.9022500468503162
+      },
+      "holdout_average_precision_natural": {
+        "lightgbm": 0.9034182545014893,
+        "xgboost": 0.9089783032119045,
+        "blend": 0.9083662110716537
+      },
+      "identity_dropout": true,
+      "predictor": "blend",
+      "judge_unseen_rates": {
+        "username": 0.32,
+        "jobname": 0.8491,
+        "account": 0.274
+      },
+      "holdout_masked_share": {
+        "username": 0.36,
+        "jobname": 0.849,
+        "account": 0.276
+      },
+      "validation_rounds": {
+        "lightgbm": 158,
+        "xgboost": 368
+      },
+      "final_rounds": {
+        "lightgbm": 212,
+        "xgboost": 493
+      },
+      "n_features": 166,
+      "dropped_for_extrapolation": [],
+      "refit_seeds": 2,
+      "top_features": [
+        [
+          "life_remaining_seconds",
+          0.48636
+        ],
+        [
+          "life_runtime_over_limit",
+          0.12623
+        ],
+        [
+          "cat_username",
+          0.06635
+        ],
+        [
+          "cat_account",
+          0.04472
+        ],
+        [
+          "obs_last_offset",
+          0.03376
+        ],
+        [
+          "life_limit_shortfall",
+          0.02941
+        ],
+        [
+          "timelimit",
+          0.0259
+        ],
+        [
+          "start_day",
+          0.0114
+        ],
+        [
+          "timelimit_log",
+          0.00958
+        ],
+        [
+          "tc_queue",
+          0.00795
+        ],
+        [
+          "start_hour_cos",
+          0.00722
+        ],
+        [
+          "te_queue",
+          0.00715
+        ],
+        [
+          "ncores",
+          0.00708
+        ],
+        [
+          "te_queue__timelimit_bucket",
+          0.00706
+        ],
+        [
+          "obs_span",
+          0.00703
+        ],
+        [
+          "tc_queue__timelimit_bucket",
+          0.00668
+        ],
+        [
+          "start_hour_sin",
+          0.00554
+        ],
+        [
+          "obs_rows_per_host",
+          0.0052
+        ],
+        [
+          "life_rows_per_host",
+          0.00494
+        ],
+        [
+          "life_span",
+          0.00467
+        ],
+        [
+          "tc_username",
+          0.0041
+        ],
+        [
+          "queue_wait_over_timelimit",
+          0.00381
+        ],
+        [
+          "queue_wait",
+          0.00342
+        ],
+        [
+          "te_account",
+          0.00336
+        ],
+        [
+          "life_rows",
+          0.00334
+        ]
+      ]
+    }
+  ],
+  "macro_holdout_auprc": 0.8380950476363404,
+  "complete": true
+}

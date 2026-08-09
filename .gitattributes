@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.parquet binary
+*.joblib binary
+*.zip binary

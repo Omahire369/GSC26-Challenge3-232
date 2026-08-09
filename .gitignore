@@ -1,0 +1,35 @@
+# Competition data must not be committed (rules: no competition data, hidden
+# labels or other non-public competition artifacts in the repository).
+training_data_bundle/
+validation_labeled_bundle/
+unlabeled_judge_data_bundle/
+sample_submission.csv
+data-chunk-info.txt
+
+# Derived intermediates are large and fully regenerable from the raw data.
+artifacts/*
+!artifacts/models/
+!artifacts/submission/
+
+# Of the model directory, keep only the trained artifacts and the report; the
+# rules allow required model artifacts, and 40 MB is far inside the 2 GB cap.
+artifacts/models/*
+!artifacts/models/*.joblib
+!artifacts/models/validation_report.json
+
+# Of the submission directory, keep the scored artifact and the upload ZIP.
+artifacts/submission/*
+!artifacts/submission/submission.csv
+!artifacts/submission/submission.zip
+
+# Generated per submission: it must carry the hash of the commit that contains
+# it, which no committed file can satisfy. scripts/package_submission.py writes
+# it from the current HEAD.
+repo_link.txt
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
